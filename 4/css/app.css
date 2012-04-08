@@ -1,0 +1,200 @@
+html, body {
+    background-color: #e0f0ff;
+    height: 100%;
+    color: #444466;
+}
+
+nav[role="navigation"] {
+    position: relative;
+}
+
+.navlink, .navlink:hover {
+    display: block;
+    float: none;
+    color: #88d099;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 2px;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    -webkit-tap-highlight-color: transparent;
+    text-transform: uppercase;
+}
+
+.navlink:hover,.navlink:active, .navlink-active {
+    -webkit-transition: color 0.4s ease-in-out;
+    -moz-transition: color 0.4s ease-in-out;
+    -o-transition: color 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
+    color: #ffffff;
+    background-color: transparent;
+    outline: 0 none;
+}
+
+.navlink-active {
+    color: #ffffff;
+    text-shadow: 0em 0em 0.6em #fff;
+}
+
+.navlink-item {
+    float: none;
+    display: block;
+    margin: 0 0.9em 0;
+    padding: 1em 0 0.3em;
+}
+
+.navlink-item-active {
+}
+
+
+.navlinks {
+    background-color: #00446a;
+    margin-bottom: 1em;
+    border-bottom: 0.20em solid #fff;
+    background: -webkit-linear-gradient(top, #66aacf 0%, #00446a 65%);
+    background: -moz-linear-gradient(top, #66aacf 0%, #00446a 65%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66aacf), color-stop(65%,#00446a));
+    background: linear-gradient(top, #66aacf 0%,#00446a 65%);
+
+}
+
+.navlinks-items {
+    height: 2.8em;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: height 0.7s ease-in-out;
+    -moz-transition: height 0.7s ease-in-out;
+    -o-transition: height 0.7s ease-in-out;
+    transition: height 0.7s ease-in-out;
+}
+
+.navlinks-items:hover {
+    height: 11.2em !important;
+    xmargin-bottom: 0;
+    xborder-bottom: 0 none;
+}
+
+.drawer-closer, .drawer-closer:hover {
+    color: #00345a;
+    font-weight: bold;
+    font-size: 1.0em;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    text-shadow:0em 0em 0.2em #fff;
+    display: none;
+    text-align: center;
+    line-height:1em;
+    border: 0 none;
+    box-shadow: 0 -2px 8px #fff;
+    text-decoration: none;
+    background: #00446a;
+    padding: 0.6em 0;
+    margin-top: 1em;
+}
+
+.navlinks-items:hover ~ .drawer-closer {
+    display: block;
+}
+
+header[role=banner] {
+    position: relative;
+    /*-webkit-transition: height 0.7s ease-in-out;
+    -moz-transition: height 0.7s ease-in-out;
+    -o-transition: height 0.7s ease-in-out;
+    transition: height 0.7s ease-in-out;*/
+}
+
+.main-content {
+    display: block;
+    float: none;
+    margin-bottom: 5em;
+}
+
+.main-content-title {
+    font-size: 1.8em;
+    color: #204097;
+    margin: 0.5em 0 0.3em;
+}
+
+.aside-content {
+    float: right;
+    width: 9em;
+    clear: none;
+    display: none;
+    background-color: #a0a0a0;
+    margin: 1em 0;
+    padding: 0.2em;
+}
+
+.no-js .container-fullwidth, .js .container-fullwidth, .container-fullwidth article.grid_12 {
+    margin: 0;
+    width: 100%;
+}
+
+.main-content-introduction-image {
+    width: 14em;
+}
+
+.main-content-introduction-image img {
+    max-width: 50%;
+}
+
+@media screen and (orientation: landscape) {
+    .navlink-item:nth-child(even) {
+        width:45%;
+        float:left;
+        clear:left;
+    }
+    .navlink-item:nth-child(1) {
+        display: block;
+        float:none;
+    }
+    .navlinks-items:hover {
+        height: 8.3em;
+        overflow: hidden;
+    }
+    .main-content-introduction-image img {
+        max-width: 75%;
+    }
+}
+
+@media screen and (min-width: 10600px) {
+    .aside-content {
+        display: block;
+    }
+    .main-content {
+        float: left;
+    }
+    .container-fullwidth article.grid_12 {
+        margin: 0 1%;
+        width: 73%;
+    }
+    .navlink-item {
+        float: left;
+        clear: none;
+        width: auto;
+        display: block;
+        margin: 0 0.9em 0;
+        padding: 1em 0 0.3em;
+    }
+    .navlink-item:nth-child(even) {
+        width: auto;
+        float: left;
+        clear: none;
+    }
+    .navlink-item:nth-child(1) {
+        display: block;
+        float: left;
+    }
+    .navlinks-items::after, .navlinks-items:hover::after {
+        content: '';
+        text-shadow: none;
+    }
+    .navlinks-items:hover {
+        height: 2.8em;
+    }
+    .main-content-introduction-image img {
+        max-width: 100%;
+    }
+}
+
